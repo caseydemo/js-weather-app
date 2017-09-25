@@ -103,6 +103,9 @@ function parseResponse() {
 
 function httpRequestOnError() {
 
-  alert("request is NOT COOL!");
+    errorMessage.innerHTML = "HTTP request could not be completed";
+    error.style.display = 'block';
+    output.style.display = 'none';
+
 
 }
