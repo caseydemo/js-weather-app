@@ -1,6 +1,5 @@
 .container {
   max-width: 500px;
-  border: 1px solid #ccc;
 }
 
 h1 {
@@ -23,4 +22,12 @@ th, td {
 
 .table {
   margin-bottom: 0px;
+}
+
+#error {
+  display: none;
+}
+
+#output {
+  display: none;
 }
