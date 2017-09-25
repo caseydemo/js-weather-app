@@ -4,6 +4,14 @@ var weatherButton = document.getElementById("weatherButton");
 var error = document.getElementById("error");
 var errorMessage = document.getElementById("errorMessage");
 
+var output = document.getElementById("output");
+
+var conditionOutput = document.getElementById("conditionOutput");
+var temperatureOutputK = document.getElementById("temperatureOutputK");
+var temperatureOutputF = document.getElementById("temperatureOutputF");
+var temperatureOutputC = document.getElementById("temperatureOutputC");
+var cityOutput = document.getElementById("cityOutput");
+
 var apiRequest;
 
 
@@ -34,7 +42,10 @@ function catchResponse() {
 
   if (apiRequest.statusText === "OK") {
 
-    console.log("Good request");
+    errorMessage.innerHTML = '';
+    error.style.display = 'none';
+    output.style.display = 'block';
+
 
   }
 
@@ -42,6 +53,7 @@ function catchResponse() {
 
     errorMessage.innerHTML = JSON.parse(apiRequest.responseText).message;
     error.style.display = 'block';
+    output.style.display = 'none';
 
   }
   

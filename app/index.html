@@ -15,7 +15,7 @@
 
   <div id="inputForm" class="form-inline">
 
-    <input type="text" class="form-control" placeholder="40507" id="zipInput">
+    <input type="number" class="form-control" placeholder="40507" id="zipInput">
 
     <button type="button" class="btn btn-success" id="weatherButton">Get Weather</button>
 
@@ -42,7 +42,7 @@
       </div>
 
       <div class="panel-body">
-        Content
+        <p id="cityOutput"></p>
       </div>
 
     </div>
@@ -62,9 +62,9 @@
             <th>Celsius</th>
           </tr>
           <tr>
-            <td>100 &deg;</td>
-            <td>200 &deg;</td>
-            <td>300 &deg;</td>
+            <td><p id="temperatureOutputK"></p></td>
+            <td><p id="temperatureOutputF"></p></td>
+            <td><p id="temperatureOutputC"></p></td>
           </tr>
         </table>
 
@@ -79,7 +79,7 @@
       </div>
 
       <div class="panel-body">
-        Content
+        <p id="conditionOutput"></p>
       </div>
 
     </div>
