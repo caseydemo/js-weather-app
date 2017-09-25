@@ -28,7 +28,7 @@ If the request is successful, display:
 
 1. City name
 2. Current conditions
-3. Current temperature in Kelvin, Fahrenheit, and Celcius, and
+3. Current temperature in Kelvin, Fahrenheit, and Celsius, and
 4. an image, selected by the current temperature.
 
 If the request is unsuccessful, display an error message.
