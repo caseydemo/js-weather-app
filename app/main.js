@@ -11,6 +11,7 @@ var temperatureOutputK = document.getElementById("temperatureOutputK");
 var temperatureOutputF = document.getElementById("temperatureOutputF");
 var temperatureOutputC = document.getElementById("temperatureOutputC");
 var cityOutput = document.getElementById("cityOutput");
+var weatherImage = document.getElementById("weatherImage");
 
 var apiRequest;
 
@@ -78,6 +79,25 @@ function parseResponse() {
     cityOutput.innerHTML = results.name;
 
     conditionOutput.innerHTML = results.weather[0].description;
+
+    if (tempF > 92) {
+      weatherImage.src = "http://www.thelandofshadow.com/wp-content/uploads/2013/04/mordor_by_edli-d2yrha5.jpg";
+    }
+    else if (tempF > 85) {
+      weatherImage.src = "https://media.rbl.ms/image?u=%2Ffiles%2F2016%2F04%2F15%2F635963469764710781-1002509858_tumblr_n6vi59KPmO1tbh1dho1_400.gif&ho=https%3A%2F%2Faz616578.vo.msecnd.net&s=765&h=09e03017b9751456564b4ce2542f761a7bb5f8d551aaf061b251294fbd316e80&size=980x&c=3646041352";
+    }
+    else if (tempF > 75) {
+      weatherImage.src = "http://i0.kym-cdn.com/photos/images/original/001/093/677/752.png";
+    }
+    else if (tempF > 65) {
+      weatherImage.src = "http://ecotechpoolservice.com/wp-content/uploads/2012/10/Swimming-Pool-Sustainability.jpg";
+    }
+    else if (tempF > 32) {
+      weatherImage.src = "http://yumgoggle.com/wp-content/uploads/2015/12/Hot-Cocoa-DSC_4177-square-600.jpg";
+    }
+    else {
+      weatherImage.src = "https://i.pinimg.com/736x/ba/74/25/ba7425153dfe73f669027c7fc9d0ef75--jon-snow-funny-animals.jpg";
+    }
 
 }
 
