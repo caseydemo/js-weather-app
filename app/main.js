@@ -46,6 +46,7 @@ function catchResponse() {
     error.style.display = 'none';
     output.style.display = 'block';
 
+    parseResponse();
 
   }
 
@@ -57,11 +58,28 @@ function catchResponse() {
 
   }
   
-  console.log(apiRequest);
+  console.log(JSON.parse(apiRequest.responseText));
 
 
 }
 
+function parseResponse() {
+
+    var results = JSON.parse(apiRequest.responseText);
+
+    var tempK = Math.round(results.main.temp);
+    var tempF = Math.round(9/5 * (tempK - 273) + 32); // 9/5 (K - 273) + 32
+    var tempC = tempK - 273; // K - 273
+
+    temperatureOutputK.innerHTML = tempK + "&deg;";
+    temperatureOutputF.innerHTML = tempF + "&deg;";
+    temperatureOutputC.innerHTML = tempC + "&deg;";
+
+    cityOutput.innerHTML = results.name;
+
+    conditionOutput.innerHTML = results.weather[0].description;
+
+}
 
 function httpRequestOnError() {
 
